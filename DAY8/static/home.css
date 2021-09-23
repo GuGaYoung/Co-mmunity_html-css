@@ -1,0 +1,52 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 2;
+    background-color: #efefef;
+    border: solid #c9c9c9 1px;
+    border-radius: 9px;
+    padding: 10px 20px;
+}
+
+.updated-news {
+    flex: 1;
+    color: cornflowerblue;
+    font-weight: bold;
+}
+
+.news-list {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.news-item span {
+    display: inline-block;
+    background-color: cornflowerblue;
+    border-radius: 30%;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    padding: 2px 5px;
+    margin: 3px;
+}
+
+.news-item p {
+    display: inline-block;
+    color: black;
+    font-weight: 400;
+    margin: 5px;
+}
+
+.mini-room {
+    flex: 2;
+    color: indigo;
+    font-weight: bold;
+}
+
+.mini-room-content {
+    width: 92%;
+    height: 80%;
+    background-color: white;
+    margin-top: 25px;
+}
