@@ -1,0 +1,13 @@
+.photo {
+    height: 500px;
+    overflow: auto;
+}
+
+.photo-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.photo-item img {
+    width: 300px;
+}
