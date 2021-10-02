@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+          integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>2021 MINI HOMEPAGE</title>
+    <link rel="stylesheet" href="static/font.css"/>
+    <link rel="stylesheet" href="static/layout.css"/>
+    <link rel="stylesheet" href="static/diary.css"/>
+    <script>
+        function getTextFile() {
+            var input = document.createElement("input");
+            input.type = "file";
+            input.accept = "text/plain";
+            input.onchange = function (event) {
+                processFile(event.target.files[0]);
+            };
+            input.click();
+        }
+
+        function processFile(file) {
+            var reader = new FileReader();
+            reader.readAsText(file, "utf-8");
+
+            reader.onload = function () {
+                let secretDiary = document.querySelector(".secret-diary-item");
+                secretDiary.innerHTML = '<h3>이건 비밀노트!</h3>\n' + '<p>' + reader.result + '</p>';
+                secretDiary.style.display = "block";
+            };
+        }
+    </script>
+</head>
+<body>
+<div class="bookcover">
+    <div class="bookdot">
+        <div class="page">
+            <section>
+                <p class="visitors">TODAY <strong>109</strong> | TOTAL 1385214</p>
+                <div class="section-content">
+                    <img src="./static/images/milky00.jpg" alt="프로필 이미지">
+                    <p class="font-neo">산책이 가고 싶다 멍! 먹는 것과 산책의 나의 낙이닷!!!! </p>
+                    <p class="font-neo">밀키 귀여운거 ㅇㅈ??</p>
+                    <div class="profile-dropdown">
+                        <div class="dropdown-btn">
+                            <div class="dropdown-title">산책가기</div>
+                            <div class="triangle-down"></div>
+                        </div>
+                        <div class="dropdown-content">
+                            <a href="https://cafe.naver.com/codeuniv" target="_blank">코뮤니티로 가기</a>
+                            <a href="https://www.instagram.com/happy._iii/" target="_blank">인스타그램으로 가기</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <main>
+                <div class="main-header">
+                    <p class="introduction font-neo">叉占을 포ブl할㉣łı 꿈을 포ブl할㉣łı</p>
+                    <p class="address">https://github.com/gayoung-i</p>
+                </div>
+                <div class="main-content">
+                    <div class="diary">
+                        <ul class="diary-list font-kyobohand">
+                            <li class="diary-item">
+                                <h3>21.09.17</h3>
+                                <p>산책!! 가고 싶다 산책!!</p>
+                                <p>가도 또 가고 싶은 이런 매력💥</p>
+                                <p>모두가 다 느껴야하는데 말이야...</p>
+                            </li>
+                            <li class="diary-item">
+                                <h3>21.09.5</h3>
+                                <p>감명 깊은 명언을 들었다...</p>
+                                <br/>
+                                <p>================================</p>
+                                <br/>
+                                <p>지속적으로 성공하는 사람들의 특징은 다음과 같다.</p>
+                                <br/>
+                                <p>목표를 달성하면 더 높은 목표를 세운다</p>
+                                <br/>
+                                <p>그리고 목표를 다시 높게 재조정한다.</p>
+                                <p>이것은 결코 끝나지 않은 과정이다.</p>
+                                <br/>
+                                <p>일을 잘하는 사람은 이 과정을 되풀이한다.</p>
+                                <br/>
+                                <p>-짐 콜린스-</p>
+                            </li>
+                            <li class="diary-item">
+                                <h3>21.08.27</h3>
+                                <p>오늘은 기분이 좋타! 아구 좋타!</p>
+                            </li>
+                            <li class="diary-item secret-diary-item">
+                                <h3>비밀일기!</h3>
+                            </li>
+                        </ul>
+                        <button class="secret-diary-button" onclick="getTextFile()">
+                            <i class="fas fa-lock"></i>
+                            <span class="font-neo">밀키의 비밀일지 보기</span>
+                        </button>
+                    </div>
+                </div>
+            </main>
+            <div class="menu">
+                <ul class="menu-button-list">
+                    <li class="menu-button-item">
+                        <a href="./home.html">홈</a>
+                    </li>
+                    <li class="menu-button-item">
+                        <a href="./diary.html">다이어리</a>
+                    </li>
+                    <li class="menu-button-item">
+                        <a href="./photo.html">사진첩</a>
+                    </li>
+                    <li class="menu-button-item">
+                        <a href="./guestBook.html">방명록</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
